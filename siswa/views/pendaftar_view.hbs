@@ -1,0 +1,870 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Form Pendaftaran</title>
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/840569fac1.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/840569fac1.js" crossorigin="anonymous"></script>
+</head>
+<style>
+#container {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#container.toggled {
+    padding-left: 250px;
+}
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #2c3e50;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#container.toggled #sidebar {
+    width: 250px;
+}
+
+#page-content-container {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#container.toggled #page-content-container {
+    position: absolute;
+    margin-right: -250px;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+    font-weight: bold;
+}
+
+@media(min-width:768px) {
+    #container {
+        padding-left: 250px;
+    }
+
+    #container.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar {
+        width: 250px;
+    }
+
+    #container.toggled #sidebar {
+        width: 0;
+    }
+
+    #page-content-container {
+        padding: 20px;
+        position: relative;
+    }
+
+    #container.toggled #page-content-container {
+        position: relative;
+        margin-right: 0;
+    }
+}
+    .p{
+        background-color: orange;
+        width: 75%;
+margin-top: 80px;
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+    }
+</style>
+<body>
+<div id="container">
+<div id="sidebar">
+    <ul class="sidebar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="http://localhost:8080/index/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:5000/">Pendaftar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:5000/table/">Informasi Siswa</a>
+          </li>
+        </ul>
+    
+    </ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#menu").click(function(e) {
+          e.preventDefault();
+        $("#container").toggleClass("toggled");
+        });
+    });
+</script>
+<!--togel-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div id="page-content-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+        <a href="#menu" class="btn btn-default" id="menu"><i class="fas fa-list-ul"></i></a>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="http://localhost:8000/index/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="http://localhost:5000/">Pendaftar</a>
+      <a class="nav-item nav-link" href="http://localhost:5000/table">Informasi</a>
+    </div>
+  </div>
+</nav>
+	      <div class="login-form">
+        <form action="/save" method="post">
+            <div class="modal-body">
+<div class="q">
+    <br>
+    <h4>Registrasi Peserta Didik</h4>
+    <hr>
+    <div style="width: 100%;" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Jenis pendaftaran</label>
+        </div>
+        <select class="custom-select"  name="jenis_pendaftaran">
+            <option>Pilih</option>
+            <option>Baru</option>
+            <option>Pindahan</option>
+
+        </select>
+    </div>
+    <div class="q">
+        <div style="width: 100%;" class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Jalur pendaftaran</label>
+            </div>
+            <select class="custom-select" name="jalur_pendaftaran">
+                <option>Pilih</option>
+                <option>PRESTASI</option>
+                <option>UMUM</option>
+                </select>
+        </div>
+    </div>
+        <div class="q">
+        <div style="width: 100%;" class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Pilih Kejuruan</label>
+            </div>
+            <select class="custom-select" name="pilih_kejuruan">
+                <option>Pilih</option>
+                <option>Teknik Komputer Jaringan</option>
+                <option>Teknik Bisnis Sepeda Montor</option>
+                <option>Tata Busana</option>
+                <option>Akuntansi</option>
+            </select>
+        </div>
+</div>
+<div class="q">
+    <div style="width: 100%;" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Apakah Anda Pernah TK:</label>
+        </div>
+        <select class="custom-select" name="tk">
+            <option>Pilih</option>
+            <option>Tidak</option>
+            <option>Ya</option>
+            </select>  
+    </div>
+</div>
+<div class="q">
+    <div style="width: 100%;" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Apakah Anda Pernah Paud:</label>
+        </div>
+        <select class="custom-select" name="paud">
+            <option>Pilih</option>
+            <option>Tidak</option>
+            <option>Ya</option>
+            </select>
+    </div>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend"> 
+      <span class="input-group-text" id="inputGroup-sizing-default">No.Un</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nomor Peserta Ujian Nasional Sebelumnya" name="no_un">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">SKHUN</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nomor Seri SKHUN Sebelumnya" name="skhun">
+  </div>
+    <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Ijazah</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nomor Seri Ijazah Sebelumnya" name="ijazah">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Hobi</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Hobi apa yang anda sukai" name="hobi">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Cita-Cita</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Apa yang anda cita-citakan" name="cita">
+  </div>
+  <!--/////////////////////////////////////////////////Data pribadi///////////////////////////////////////////////--->
+    <br>
+  <h4>Data Pribadi</h4>
+  <hr>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nama Lengkap</span>
+    </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Isi Nama Lengkap Anda" name="nm">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Jenis Kelamin</label>
+    </div>
+    <select class="custom-select" name="gender">
+        <option>Pilih</option>
+        <option>Perempuan</option>
+        <option>Laki-laki</option>
+        </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">NISN</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nomor Induk Siswa Nasional" name="nisn">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">NIK</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nomor Induk Kependudukan" name="nik">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Tempat Lahir</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="tempat_lahir">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Tanggal Lahir</span>
+    </div>
+    <input type="Date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="tgl">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Agama</label>
+    </div>
+    <select class="custom-select" name="agama">
+        <option  value="" selected="selected">Pilih :</option>
+        <option>Budha</option>
+        <option>Hindu</option>
+        <option>Islam</option>
+        <option>Katholik</option>
+        <option>Khong Hu Chu</option>
+        <option>Kristen / protestan</option>
+        <option>Lainnya</option>
+        </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Kebutuhan Khusus</label>
+    </div>
+    <select class="custom-select" name="kebutuhan_khusus">
+        <option  value="" selected="selected">Pilih :</option>
+        <option>Autis</option>
+        <option>Bakat Istimewa</option>
+        <option>Cerdas Istimewa</option>
+        <option>Down Sindrome</option>
+        <option>Hiper aktif</option>
+        <option>Indigo</option>
+        <option>Kesulitan Belajar</option>
+        <option>Lainnya</option>
+        <option>Narkoba</option>
+        <option>Tidak</option>
+        <option>Tuna Daksa Ringan</option>
+        <option>Tuna Daksa Sedang</option>
+        <option>Tuna ganda</option>
+        <option>Tuna Grahita ringan</option>
+        <option>Tuna Grahita Sedang</option>
+        <option>Tuna Laras</option>
+        <option>Tuna Netra</option>
+        <option>Tuna Rungu</option>
+        <option>Tuna Wicara</option>
+      </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Alamat jalan</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="alamat">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">RT</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="rt">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">RW</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="rw">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nama Dusun/Desa</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="dusun">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Kelurahan</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="kel">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Kecamatan</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="kec">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Kabupaten/kota</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="kota">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Kode Pos</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="pos">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Tempat Tinggal</label>
+    </div>
+    <select class="custom-select" name="tempat_tinggal">
+        <option  value="" selected="selected">Pilih :</option>
+        <option>Asrama</option>
+        <option>Bersama orang tua</option>
+        <option>Kos</option>
+        <option>Lainnya</option>
+        <option>Panti Asuhan</option>
+        <option>Wali</option>
+    </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Modal Transportasi</label>
+    </div>
+    <select class="custom-select" name="tranportasi">
+        <option  value="" selected="selected">Pilih :</option>
+        <option>Andong / Bendi / Sado / Dokar / Delman / Beca</option>
+        <option>Jalan kaki</option>
+        <option>Jemputan Sekolah</option>
+        <option>Kendaraan pribadi</option>
+        <option>Kendaraan Umum / angkot / Pete-pete</option>
+        <option>Kereta Api</option>
+        <option>Lainnya</option>
+        <option>Ojek</option>
+        <option>Perahu penyebrangan / Rakit / Getek</option>    </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nomor HP/Telpon</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="no_hp">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">SKTM</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="No.Surat Keterangan Tidak Mampu " name="sktm">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">KKS</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="No.Kartu Keluarga Sejahtera" name="kks">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">KPS</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="No. Kartu Pra Sejahtera" name="kps">
+  </div>
+
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">KIP</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="No. Kartu Indonesia Pintar" name="kip">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">KIS</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="No. Kartu Indonesia Sehat" name="kis">
+  </div>
+      <div style="width: 100%;" class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Kewarganegaraan</label>
+      </div>
+      <select class="custom-select" name="kewarganegaraan">
+          <option  value="" selected="selected">Pilih :</option>
+          <option>Warga Negara Indonesia (WNI)</option>
+          <option>Warga Negara Asing (WNA)</option>
+          </select>
+  </div>
+
+
+      <br>
+      <h4>Data Ayah Kandung</h4>
+      <hr>
+      <div style="width: 100%;" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Nama Ayah Kandung</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="nm_bpk">
+      </div>
+      <div style="width: 100%;" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Tahun Lahir</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tahun Lahir Ayah Kandung. contoh : 1965" name="thn_lahir_bpk">
+      </div>
+      <div style="width: 100%;" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Pendidikan</label>
+        </div>
+        <select class="custom-select" name="pendidikan_bpk">
+          <option value="" selected="selected">Pilih :</option>
+          <option>D1</option>
+          <option>D2</option>
+          <option>D3</option>
+          <option>D4/S1</option>
+          <option>Putus SD</option>
+          <option>S2</option>
+          <option>S3</option>
+          <option>SD Sederajat</option>
+          <option>SMA Sederajat</option>
+          <option>SMP Sederajat</option>
+            </select>
+    </div>
+    <div style="width: 100%;" class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="pekerjaan_bpk">Pekerjaan</label>
+      </div>
+      <select class="custom-select" name="pekerjaan_bpk">
+        <option value="" selected="selected">Pilih :</option>
+        <option>Buruh</option>
+        <option>Karyawan Swasta</option>
+        <option>Lain-lain</option>
+        <option>Nelayan</option>
+        <option>Pedagang Besar</option>
+        <option>Pedagang Kecil</option>
+        <option>Pensiunan</option>
+        <option>Petani</option>
+        <option>Peternak</option>
+        <option>PNS/TNI/POLRI</option>
+        <option>Tidak bekerja</option>
+        <option>Wiraswasta</option>
+        <option>Wirausaha</option>
+          </select>
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Penghasilan Bulanan</label>
+    </div>
+    <select class="custom-select" name="penghasilan_bln_bpk">
+        <option value="" selected="selected">Pilih :</option>
+        <option>1 Juta - 1.999.999</option>
+        <option>2 Juta - 4.999.999</option>
+        <option>5 Juta - 20 Juta</option>
+        <option>500.000 - 999.9999</option>
+        <option>Kurang dari 500,000</option>
+        <option>Lebih dari 20 Juta</option>
+        </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Kebutuhan Khusus</label>
+  </div>
+  <select class="custom-select" name="kebutuhan_khusus_bpk">
+      <option value="" selected="selected">Pilih :</option>
+      <option>Autis</option>
+      <option>Bakat Istimewa</option>
+      <option>Cerdas Istimewa</option>
+      <option>Down Sindrome</option>
+      <option>Hiper aktif</option>
+      <option>Indigo</option>
+      <option>Kesulitan Belajar</option>
+      <option>Lainnya</option>
+      <option>Narkoba</option>
+      <option>Tidak</option>
+      <option>Tuna Daksa Ringan</option>
+      <option>Tuna Daksa Sedang</option>
+      <option>Tuna ganda</option>
+      <option>Tuna Grahita ringan</option>
+      <option>Tuna Grahita Sedang</option>
+      <option>Tuna Laras</option>
+      <option>Tuna Netra</option>
+      <option>Tuna Rungu</option>
+      <option>Tuna Wicara</option>
+      </select>
+</div>
+<!--//////////////////////////////////////////Ibu///////////////////////////////////////////////////////////////////////-->
+  <br>
+  <h4>Data Ibu Kandung</h4>
+  <hr>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nama Ibu Kandung</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="nm_ibu">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Tahun Lahir</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tahun Lahir Ibu Kandung. contoh : 1965" name="thn_lahir_ibu">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Pendidikan</label>
+    </div>
+    <select class="custom-select" name="pendidikan_ibu">
+      <option  value="" selected="selected">Pilih :</option>
+      <option>D1</option>
+      <option>D2</option>
+      <option>D3</option>
+      <option>D4/S1</option>
+      <option>Putus SD</option>
+      <option>S2</option>
+      <option>S3</option>
+      <option>SD Sederajat</option>
+      <option>SMA Sederajat</option>
+      <option>SMP Sederajat</option>
+        </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Pekerjaan</label>
+  </div>
+  <select class="custom-select" name="pekerjaan_ibu">
+    <option value="" selected="selected">Pilih :</option>
+    <option>Buruh</option>
+    <option>Karyawan Swasta</option>
+    <option>Lain-lain</option>
+    <option>Nelayan</option>
+    <option>Pedagang Besar</option>
+    <option>Pedagang Kecil</option>
+    <option>Pensiunan</option>
+    <option>Petani</option>
+    <option>Peternak</option>
+    <option>PNS/TNI/POLRI</option>
+    <option>Tidak bekerja</option>
+    <option>Wiraswasta</option>
+    <option>Wirausaha</option>
+      </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="inputGroupSelect01">Penghasilan Bulanan</label>
+</div>
+<select class="custom-select" name="penghasilan_bln_ibu">
+    <option value="" selected="selected">Pilih :</option>
+    <option>1 Juta - 1.999.999</option>
+    <option>2 Juta - 4.999.999</option>
+    <option>5 Juta - 20 Juta</option>
+    <option>500.000 - 999.9999</option>
+    <option>Kurang dari 500,000</option>
+    <option>Lebih dari 20 Juta</option>
+    </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+<div class="input-group-prepend">
+<label class="input-group-text" for="inputGroupSelect01">Kebutuhan Khusus</label>
+</div>
+<select class="custom-select" name="kebutuhan_khusu_ibu">
+  <option  value="" selected="selected">Pilih :</option>
+  <option>Autis</option>
+  <option>Bakat Istimewa</option>
+  <option>Cerdas Istimewa</option>
+  <option>Down Sindrome</option>
+  <option>Hiper aktif</option>
+  <option>Indigo</option>
+  <option>Kesulitan Belajar</option>
+  <option>Lainnya</option>
+  <option>Narkoba</option>
+  <option>Tidak</option>
+  <option>Tuna Daksa Ringan</option>
+  <option>Tuna Daksa Sedang</option>
+  <option>Tuna ganda</option>
+  <option>Tuna Grahita ringan</option>
+  <option>Tuna Grahita Sedang</option>
+  <option>Tuna Laras</option>
+  <option>Tuna Netra</option>
+  <option>Tuna Rungu</option>
+  <option>Tuna Wicara</option>
+  </select>
+</div>
+<!--/////////////////////////wali////////////////////////////////////////////////////////////////////////////////-->
+  <br>
+  <h4>Data Wali</h4>
+  <hr>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nama Wali</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="nm_wali">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Tahun Lahir</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tahun Lahir Wali Kandung. contoh : 1965" name="thn_lahir_wali">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Pendidikan</label>
+    </div>
+    <select class="custom-select" name="pendidikan_wali">
+      <option value="" selected="selected">Pilih :</option>
+      <option>D1</option>
+      <option>D2</option>
+      <option>D3</option>
+      <option>D4/S1</option>
+      <option>Putus SD</option>
+      <option>S2</option>
+      <option>S3</option>
+      <option>SD Sederajat</option>
+      <option>SMA Sederajat</option>
+      <option>SMP Sederajat</option>
+        </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Pekerjaan</label>
+  </div>
+  <select class="custom-select" name="pekerjaan_wali">
+    <option value="" selected="selected">Pilih :</option>
+    <option>Buruh</option>
+    <option>Karyawan Swasta</option>
+    <option>Lain-lain</option>
+    <option>Nelayan</option>
+    <option>Pedagang Besar</option>
+    <option>Pedagang Kecil</option>
+    <option>Pensiunan</option>
+    <option>Petani</option>
+    <option>Peternak</option>
+    <option>PNS/TNI/POLRI</option>
+    <option>Tidak bekerja</option>
+    <option>Wiraswasta</option>
+    <option>Wirausaha</option>
+      </select>
+</div>
+<div style="width: 100%;" class="input-group mb-3">
+<div class="input-group-prepend">
+  <label class="input-group-text" for="inputGroupSelect01">Penghasilan Bulanan</label>
+</div>
+<select class="custom-select" name="penghasilan_bln_wali">
+    <option  value="" selected="selected">Pilih :</option>
+    <option>1 Juta - 1.999.999</option>
+    <option>2 Juta - 4.999.999</option>
+    <option>5 Juta - 20 Juta</option>
+    <option>500.000 - 999.9999</option>
+    <option>Kurang dari 500,000</option>
+    <option>Lebih dari 20 Juta</option>
+    </select>
+  </div>
+
+<!--Data priodik-->
+  <br>
+  <h4>Data Priodik</h4>
+  <hr>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Tinggi Badan (Cm)</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="tinggi_bdn">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Berat Badan (Kg)</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="berat_bdn">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Jarak Tempat Tinggal ke Sekolah (Km)</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="jrk_rmh">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Waktu Tempuh ke Sekolah (Menit)</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="tempuh_sekolah">
+  </div>
+  <div style="width: 100%;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Jumlah Saudara Kandung</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" name="jml_sdr">
+  </div>
+
+
+                </div>
+            <input type="submit">
+          </div>
+        </div>
+        </div>
+        </form>
+	 <!-- Edit Product Modal-->
+   <form action="/update" method="post">
+       <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                  <input type="text" name="product_name" class="form-control product_name" placeholder="Product Name" required>
+              </div>
+
+              <div class="form-group">
+                  <input type="text" name="product_price" class="form-control price" placeholder="Price" required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <input type="hidden" name="id" class="product_id">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+       </div>
+  </form>
+
+	 <!-- Delete Product Modal-->
+ 	  <form id="add-row-form" action="/delete" method="post">
+ 	     <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ 	        <div class="modal-dialog">
+ 	           <div class="modal-content">
+ 	               <div class="modal-header">
+									 	<h5 class="modal-title" id="myModalLabel">Delete Product</h5>
+ 	                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ 	               </div>
+ 	               <div class="modal-body">
+												 <strong>Are You Sure To Delete This Data?</strong>
+ 	               </div>
+ 	               <div class="modal-footer">
+									 		<input type="hidden" name="product_id" class="form-control product_id2" required>
+ 	                   	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+ 	                  	<button type="submit" class="btn btn-success">Delete</button>
+ 	               </div>
+ 	      			</div>
+ 	        </div>
+ 	     </div>
+ 	 </form>
+
+<script src="/assets/js/jquery-3.3.1.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<script>
+    $(document).ready(function(){
+			//showing data to modal for edit record
+      $('#mytable').on('click','.edit',function(){
+        var product_id = $(this).data('id');
+        var product_name = $(this).data('product_name');
+        var product_price = $(this).data('product_price');
+        $('#EditModal').modal('show');
+        $('.product_name').val(product_name);
+        $('.price').val(product_price);
+        $('.product_id').val(product_id);
+      });
+			//showing modal for delete record
+			$('#mytable').on('click','.delete',function(){
+        var product_id = $(this).data('id');
+        $('#DeleteModal').modal('show');
+        $('.product_id2').val(product_id);
+      });
+
+    });
+</script>
+</body>
+</html>
